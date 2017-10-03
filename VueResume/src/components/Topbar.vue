@@ -11,11 +11,11 @@
 </template>
 
 <style lang="scss">
-  #topbar{
+  #topbar {
     display: flex;
     justify-content: space-between;
-    padding:16px;
-    font-size:20px;
-    align-items:center;
+    padding: 16px;
+    font-size: 20px;
+    align-items: center;
   }
 </style>
