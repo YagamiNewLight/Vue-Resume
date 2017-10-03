@@ -28,18 +28,31 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  display: flex;
+  flex-direction: column;
 }
 .topbar{
+  box-shadow: 0 0 3px hsla(0,0,0,0.5);
+  position: relative; z-index:1;
 }
 main{
-  margin:20px auto;
-  width:1400px;
   display: flex;
+  flex:1;
+  background-color: #ddd;
    > .editor{
-    width:20em;
-  }
+     width:40em;
+     margin:16px 8px 16px 16px;
+     background-color: #fff;
+     box-shadow: 0 0 3px hsla(0,0,0,0.5);
+     border-radius: 4px;
+     overflow: hidden;
+   }
    > .preview {
      flex: 1;
+     margin:16px 16px 16px 8px;
+     background-color: #fff;
+     box-shadow: 0 0 3px hsla(0,0,0,0.5);
+     border-radius: 2px;
    }
   }
 </style>
