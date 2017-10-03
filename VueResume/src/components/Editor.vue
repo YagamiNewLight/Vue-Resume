@@ -17,20 +17,7 @@
         <IdentityInfo v-bind:profile="profile"></IdentityInfo>
       </li>
       <li v-bind:class="{active:currentTab === 1 }">
-        <h2>工作经历</h2>
-        <el-form>
-          <div v-for="work in workHistory">
-            <el-form-item label="公司名称">
-              <el-button type="danger" @click="removeWorkHistory(work)">删除</el-button>
-              <el-input v-model="work.company"></el-input>
-            </el-form-item>
-            <el-form-item label="工作内容">
-              <el-input v-model="work.content"></el-input>
-            </el-form-item>
-            <hr>
-          </div>
-          <el-button type="primary" @click="addWorkHistory">添加工作经历</el-button>
-        </el-form>
+        <WorkExperience v-bind:workHistory="workHistory"></WorkExperience>
       </li>
       <li v-bind:class="{active:currentTab === 2 }">
         <h2>获奖情况</h2>
@@ -50,13 +37,13 @@
 
 <script>
   import IdentityInfo from './IdentityInfo.vue'
+  import WorkExperience from './WorkExperience.vue'
   export default {
-    components: {IdentityInfo},
+    components: {IdentityInfo,WorkExperience},
     data() {
       return {
         currentTab: 0,
         icons: ['#icon-credentials_icon', '#icon-gongzuo1', "#icon-jiangbei", "#icon-heart", "#icon-shujiyuedu", "#icon-phone"],
-        labelPosition: 'right',
         profile: {
           name: '',
           city: '',
@@ -65,17 +52,6 @@
         workHistory: [
           {company: '', content: ''}
         ]
-      }
-    },
-    methods: {
-      addWorkHistory() {
-        this.workHistory.push({
-          company: '', content: ''
-        })
-      },
-      removeWorkHistory(work) {
-        let index = this.workHistory.indexOf(work);
-        this.workHistory.splice(index, 1)
       }
     },
     created() {
@@ -114,7 +90,7 @@
     }
     > .panes > li {
       display: none;
-      padding: 16px;
+      padding: 32px;
       overflow: auto;
       height: 100%;
       &.active {
