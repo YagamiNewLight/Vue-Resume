@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>{{type}}经历</h2>
+    <h2>{{type}}</h2>
     <el-form>
       <div v-for="(item,index) in items">
         <el-form-item  v-for="(key,num) in keys"  v-bind:label="labels[key] || key">
@@ -9,7 +9,7 @@
         </el-form-item>
         <hr>
       </div>
-      <el-button type="primary" @click="addWorkHistory">添加{{type}}经历</el-button>
+      <el-button type="primary" @click="addWorkHistory">添加{{type}}</el-button>
     </el-form>
   </div>
 </template>
