@@ -94,23 +94,27 @@
       box-shadow: 0 0 3px hsla(0, 0, 0, 0.5);
       border-radius: 2px;
     }
-
-    .previewMode > #topbar {
-      display: none;
-    }
-    .previewMode #editor {
-      display: none;
-    }
-    .previewMode main #preview {
-      max-width: 1200px;
-      margin: 32px auto;
-    }
-    .previewMode main #preview #exitPreview {
-      display: inline-block;
-      position: absolute;
-      right: 16px;
-      bottom: 16px;
-      z-index: 1;
-    }
   }
+
+  .previewMode > #topbar {
+    display: none;
+  }
+
+  .previewMode #editor {
+    display: none;
+  }
+
+  .previewMode main #preview {
+    max-width: 1200px;
+    margin: 32px auto;
+  }
+
+  .previewMode main #preview #exitPreview {
+    display: inline-block;
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 1;
+  }
+
 </style>
