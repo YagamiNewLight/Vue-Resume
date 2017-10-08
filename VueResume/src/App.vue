@@ -17,7 +17,7 @@
     name: 'app',
     data() {
       return {
-        previewMode:false,
+        previewMode: false,
         resume: {
           profile: {
             name: '',
@@ -43,11 +43,11 @@
     components: {
       Topbar, Editor, Preview
     },
-    methods:{
-      preview(){
+    methods: {
+      preview() {
         this.previewMode = true;
       },
-      exitPreview(){
+      exitPreview() {
         this.previewMode = false;
       }
     }
@@ -74,7 +74,7 @@
     z-index: 1;
   }
 
-  main {
+  #app main {
     display: flex;
     flex: 1;
     background-color: #ddd;
@@ -94,22 +94,23 @@
       box-shadow: 0 0 3px hsla(0, 0, 0, 0.5);
       border-radius: 2px;
     }
-  }
-  .previewMode > #topbar{
-    display: none;
-  }
-  .previewMode  #editor{
-    display: none;
-  }
-  .previewMode main #preview{
-      max-width:1200px;
-      margin:32px auto;
-  }
-  .previewMode main #preview #exitPreview{
-    display: inline-block;
-    position: absolute;
-    right:16px;
-    bottom:16px;
-    z-index:1;
+
+    .previewMode > #topbar {
+      display: none;
+    }
+    .previewMode #editor {
+      display: none;
+    }
+    .previewMode main #preview {
+      max-width: 1200px;
+      margin: 32px auto;
+    }
+    .previewMode main #preview #exitPreview {
+      display: inline-block;
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      z-index: 1;
+    }
   }
 </style>
