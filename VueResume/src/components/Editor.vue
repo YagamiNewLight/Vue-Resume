@@ -83,8 +83,6 @@
           {name: ''}
         ]
       }
-    },
-    created() {
     }
   }
 </script>
